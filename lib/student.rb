@@ -42,7 +42,7 @@ def initialize(id=nil, name, grade)
 
 
 def self.create
-    student = self.new(name, grade)
+    student = self.new
     student.save
     student
   end
