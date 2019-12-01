@@ -44,6 +44,7 @@ def initialize(id=nil, name, grade)
   def self.create(name:, grade:)
     student = Student.new(name, grade)
     student.save
+  DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
 
   def self.new_from_db(row)
